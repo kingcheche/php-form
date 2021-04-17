@@ -22,7 +22,7 @@
                 <button type="submit" name="registerbtn" id="btn"> Register </button>
                
         </form>
-        <p> Already have an account? <a href="login.php"> Login </a> </p>
+        <p> Already have an account? <a href="login.php"> Login </a>  </p>
        
         </div>
       </body>

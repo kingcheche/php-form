@@ -51,7 +51,8 @@
 
 
   //password change successful
-            echo "<h2> Change successful </h2>";
+  
+            echo "<h2> Change successful/h2>";
             echo "<hr>";
            echo "<p class='message'>Login with new password <a href='login.php'>here</a></p>";
         }

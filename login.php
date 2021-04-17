@@ -15,7 +15,7 @@
       <?php    
  //Message if user is coming from cancel password button
           if(isset($_POST["cancelbtn"])) {
-            echo "<p class='message'>Continue with old password</p>";
+            echo "<p class='message'>Continue with old password </p>";
             
             } 
             

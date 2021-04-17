@@ -19,7 +19,7 @@
         </form>
         <br>
         <form action="login.php" method="post">
-        <button type="submit" name="cancelbtn" id="btn"> Cancel </button>
+        <button type="submit" name="cancelbtn" id="btn"> Cancel  </button>
        </form>
         </div>
       </body>

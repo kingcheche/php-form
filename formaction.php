@@ -11,7 +11,16 @@
             
       <?php 
    //If action is from registration page
-        if(isset($_POST["registerbtn"])) 
+        if(isset($_POST["registerbtn"])) {
+
+        if(file_exists("entry/" .$_POST["email"].".json"))
+      {
+    echo "<h2> Error </h2>";
+    echo "<hr>";
+    echo "<p class='message'> User already exist, use a new email. <a href='index.php'>Register</a>";
+    echo ("<br>");
+
+      } else
 {
    //Convert data inputs to a new variable
     $name = $_POST ["name"];
@@ -40,6 +49,7 @@
    //Save as a new file in Entry folder
    file_put_contents("entry/". $entry_data["email"] . ".json", json_encode($entry_data));
    }
+}
 
    //If action is from login page
    if(isset($_POST["loginbtn"])) 
@@ -93,14 +103,21 @@
             echo "<h2> Error </h2>";
             echo "<hr>";
             echo "<p class='message'> You do not have an account", " <a href='index.php'> Register </a>";
-            
+
          }
    }
-   $_SESSION["email"] = $email;   
+
+   //store registration email field if coming from reg page
+   if(isset($_POST["registerbtn"])) {
+      $_SESSION["email"] = $_POST["email"];  
+   }
+//store login email field if coming from login page
+   if(isset($_POST["loginbtn"])) 
+   {
+      $_SESSION["email"] = $_POST["l_email"];
+   }
 
 ?>
-
-
       </div>
       </body>
 </html>
