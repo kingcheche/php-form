@@ -18,7 +18,7 @@
       {
     echo "<h2> Error </h2>";
     echo "<hr>";
-    echo "<p class='message'> User already exist, use a new email. <a href='index.php'>Register</a>";
+    echo "<p class='message'> User already exist, <a href='login.php'>Login</a> to your acccount or use a new email to <a href='index.php'>Register</a>";
     echo ("<br>");
 
       } else
