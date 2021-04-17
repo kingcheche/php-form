@@ -33,18 +33,10 @@
 
    if(isset($_POST["loginbtn"])) 
    {
-      $email = $_POST ["l_email"];
-      $password = $_POST ["l_password"];
-  
-           $entry_data =  [
-              "l_email" => $email,
-              "l_password" => $password ];
 
       if(file_exists("entry/" .$_POST["l_email"].".json"))
       {
-   
-    
-         $entry_data = file_get_contents("entry/". $entry_data["l_email"] . ".json");
+         $entry_data = file_get_contents("entry/". $_POST ["l_email"] . ".json");
          $user_data = json_decode($entry_data);
          //to access user data
          $name = $user_data->name;
@@ -54,7 +46,7 @@
          if($_POST['l_password'] === $password){
             echo "<h2> Welcome </h2>";
       echo "<hr>";
-            echo ("<p class='message'>You have an account");
+            echo ("<p class='message'>Hello $name! You just logged in <br>What action would you like to perform?");
          echo ("<br>");
 
    echo ("<form action='resetpsw.php'> <button type='submit' name='resetpsw' id='btn'> Reset password </button> </form>");
@@ -75,6 +67,7 @@
       } else 
          {
             echo "<h2> Error </h2>";
+            echo "<hr>";
             echo "<p class='message'> You do not have an account", " <a href='index.php'> Register </a>";
          }
    }
