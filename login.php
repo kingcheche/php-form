@@ -10,13 +10,17 @@
       <div class="container">
       <h2> Login </h2>
       <hr>
-      <?php if(isset($_POST["resetbtn"])) {
+      <?php 
+      
+      //Message if user is coming from reset password button
+      if(isset($_POST["resetbtn"])) {
           echo "Login with new password";}
 
+      //Message if user is coming from cancel password button
           if(isset($_POST["cancelbtn"])) {
             echo "Continue with old password";
       } ?>
-
+ <!-- Simple login form -->
         <form action="formaction.php" method="post">
                     
                      <label for="l_email">Email</label></br>

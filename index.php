@@ -8,6 +8,7 @@
       <div class="container">
       <h2> Registration </h2>
       <hr>
+      <!-- Simple registration form -->
         <form action="formaction.php" method="post">
                      <label for="name">Name</label></br>
                 <input type="text" name="name" placeholder="Name" id="name" required> </br>
