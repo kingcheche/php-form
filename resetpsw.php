@@ -8,9 +8,11 @@
       <div class="container">
       <h2> Reset Password </h2>
       <hr>
-        <form action="login.php" method="post">
+        <form action="formaction-resetpsw.php" method="post">
                      <label for="n_password">New password</label></br>
                 <input type="password" name="n_password" placeholder="Input new password" id="psw" required> </br>
+                <label for="n_password">Confirm password</label></br>
+                <input type="password" name="nc_password" placeholder="Confirm password" id="psw" required> </br>
 
                 <button type="submit" name="resetbtn" id="btn"> Reset </button>
                

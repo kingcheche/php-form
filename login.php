@@ -8,18 +8,18 @@
 
       <body>
       <div class="container">
-      <h2> Login </h2>
-      <hr>
-      <?php 
-      
-      //Message if user is coming from reset password button
-      if(isset($_POST["resetbtn"])) {
-          echo "Login with new password";}
 
-      //Message if user is coming from cancel password button
+      <h2> Login </h2>
+      <hr> 
+      
+      <?php    
+ //Message if user is coming from cancel password button
           if(isset($_POST["cancelbtn"])) {
-            echo "Continue with old password";
-      } ?>
+            echo "<p class='message'>Continue with old password</p>";
+            
+            } 
+            
+            ?>
  <!-- Simple login form -->
         <form action="formaction.php" method="post">
                     
