@@ -2,7 +2,8 @@
 <html>
    <head>
 
-      <title> PHP Form </title>
+      <title> Login form </title>
+      <link rel="stylesheet" href="styles.css">
 
    </head>
 

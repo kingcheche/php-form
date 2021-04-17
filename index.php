@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title> Registration</title>
+      <title> Registration form</title>
+      <link rel="stylesheet" href="styles.css">
    </head>
 
       <body>

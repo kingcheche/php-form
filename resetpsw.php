@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title> Reset Password</title>
+      <title> Reset password</title>
+      <link rel="stylesheet" href="styles.css">
    </head>
 
       <body>
