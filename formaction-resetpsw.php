@@ -25,7 +25,7 @@
         if ($_POST["n_password"] != $_POST["nc_password"]) {
             echo "<h2> Error </h2>";
             echo "<hr>";
-           echo "New password not confirmed, <a href='resetpsw.php'>Try again</a>";
+           echo "<p>New password not confirmed, <a href='resetpsw.php'>Try again</a></p>";
            echo "<br>";
         } else {
 
