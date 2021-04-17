@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -15,6 +17,7 @@
     $name = $_POST ["name"];
     $email = $_POST ["email"];
     $password = $_POST ["password"];
+    
    
     //Save new variable as an associative array
     $entry_data =  [
@@ -90,11 +93,13 @@
             echo "<h2> Error </h2>";
             echo "<hr>";
             echo "<p class='message'> You do not have an account", " <a href='index.php'> Register </a>";
+            
          }
    }
-    
+   $_SESSION["email"] = $email;   
 
 ?>
+
 
       </div>
       </body>
