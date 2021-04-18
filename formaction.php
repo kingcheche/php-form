@@ -35,6 +35,9 @@
         "email" => $email,
         "password" => $password
     ];
+
+     //Save as a new file in Entry folder
+   file_put_contents("entry/". $entry_data["email"] . ".json", json_encode($entry_data));
    
     // Welcome message
     echo "<h2> Welcome </h2>";
@@ -47,8 +50,6 @@
    echo ("<br>");
    echo ("<form action='login.php'> <button type='submit' name='logout' id='btn'> Logout </button> </form>");
    
-   //Save as a new file in Entry folder
-   file_put_contents("entry/". $entry_data["email"] . ".json", json_encode($entry_data));
    }
 }
 
