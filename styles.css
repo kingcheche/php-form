@@ -12,6 +12,14 @@ h2, label,p {
     font-family: 'Segoe UI', Roboto;
 }
 
+.error{
+    color:rgb(240, 44, 44);
+}
+
+.success{
+    color:rgb(17, 165, 12);
+}
+
 
 button {
     background-color: rgb(17, 165, 12);

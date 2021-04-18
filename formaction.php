@@ -16,7 +16,7 @@
 
         if(file_exists("entry/" .$_POST["email"].".json"))
       {
-    echo "<h2> Error </h2>";
+    echo "<h2 class='error'> Error </h2>";
     echo "<hr>";
     echo "<p class='message'> User already exist, <a href='login.php'>Login</a> to your acccount or use a new email to <a href='index.php'>Register</a>";
     echo ("<br>");
@@ -40,7 +40,7 @@
    file_put_contents("entry/". $entry_data["email"] . ".json", json_encode($entry_data));
    
     // Welcome message
-    echo "<h2> Welcome </h2>";
+    echo "<h2 class='success'> Welcome </h2>";
     echo "<hr>";
     echo "<p class='message'> Hello $name! You just registered <br>What action would you like to perform?";
     echo ("<br>");
@@ -75,7 +75,7 @@
          if($_POST['l_password'] === $password){
 
    //If Correct show login message
-   echo "<h2> Welcome </h2>";
+   echo "<h2 class='success'> Welcome </h2>";
    echo "<hr>";
    echo ("<p class='message'>Hello $name! You just logged in <br>What action would you like to perform?");
    echo ("<br>");
@@ -91,7 +91,7 @@
           {
 
    //If password input is incorrect, show error message
-            echo "<h2> Error </h2>";
+            echo "<h2 class='error'> Error </h2>";
             echo "<hr>";
             echo "<p class='message'> Incorrect password", " <a href='login.php'> Try again </a>";
             
@@ -102,7 +102,7 @@
          {
 
    // If user file not found, show message: Pleas register
-            echo "<h2> Error </h2>";
+            echo "<h2 class='error'> Error </h2>";
             echo "<hr>";
             echo "<p class='message'> You do not have an account", " <a href='index.php'> Register </a>";
 
