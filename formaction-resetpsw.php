@@ -35,14 +35,14 @@
    $name = $user_data->name;
    $email = $user_data->email;
    $password = $user_data->password;
-   //change password in file to new password
-   $password = $_POST["n_password"];
+   //change password in file to new password - With password encryption
+   $password = password_hash($_POST["n_password"], PASSWORD_BCRYPT);
 
    //create a new array and save the new data      
    $new_data =  [
             "name" => $user_data->name,
             "email" => $user_data->email,
-            "password" => $_POST["n_password"]
+            "password" => $password
         ];
 
         file_put_contents("entry/" .$_SESSION["email"] . ".json", json_encode($new_data));

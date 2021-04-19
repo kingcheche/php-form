@@ -26,7 +26,8 @@
    //Convert data inputs to a new variable
     $name = $_POST ["name"];
     $email = $_POST ["email"];
-    $password = $_POST ["password"];
+    //hashing password
+    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
     
    
     //Save new variable as an associative array
@@ -72,7 +73,8 @@
          $password = $user_data->password;
 
    //Check if password input is the same with the one in the file
-         if($_POST['l_password'] === $password){
+       //  if($_POST['l_password'] == $password)
+         if(password_verify($_POST["l_password"], $password)){
 
    //If Correct show login message
    echo "<h2 class='success'> Welcome </h2>";
